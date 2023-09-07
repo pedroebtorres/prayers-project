@@ -40,8 +40,22 @@ function LoginProvider({ children }) {
   }, [navigate]);
 
   const contextValue = useMemo(() => (
-    { church, churchChange, isDisabled, handleClick, prayers, prayerChange, addPrayer }
-  ), [church, churchChange, isDisabled, handleClick, prayers, prayerChange, addPrayer]);
+    { church,
+      churchChange,
+      isDisabled,
+      handleClick,
+      prayers,
+      prayerChange,
+      addPrayer,
+      getPrayers }
+  ), [church,
+    churchChange,
+    isDisabled,
+    handleClick,
+    prayers,
+    prayerChange,
+    addPrayer,
+    getPrayers]);
 
   return (
     <LoginContext.Provider

@@ -8,6 +8,7 @@ function Login() {
     churchChange,
     isDisabled,
     handleClick,
+    getPrayers,
   } = login;
   return (
     <div
@@ -40,7 +41,10 @@ function Login() {
         <button
           type="button"
           disabled={ isDisabled }
-          onClick={ () => handleClick('/choose') }
+          onClick={ () => {
+            getPrayers();
+            handleClick('/choose');
+          } }
           className="rounded-xl border w-full p-1 my-3 text-center h-10
               border-emerald-950 transition-transform transform
               hover:text-gray-300 hover:scale-110 hover:bg-green-900
