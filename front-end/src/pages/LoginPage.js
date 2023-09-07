@@ -35,8 +35,6 @@ function Login() {
           className="my-1 text-center p-1 w-full h-10 rounded-xl"
         >
           <option value="1a-cacoal">1ª Igreja Presbiteriana de Cacoal</option>
-          <option value="3a-jipa">3ª Igreja Presbiteriana de Ji-Paraná</option>
-          <option value="ip-jardins">Igreja Presbiteriana dos Jardins</option>
         </select>
 
         <button

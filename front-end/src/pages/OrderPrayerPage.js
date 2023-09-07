@@ -25,6 +25,8 @@ function OrderPrayer() {
       Confirmar Pedido de Oração
     </button>);
 
+  const changePreview = () => setPreview((prevPreview) => !prevPreview);
+
   useEffect(() => {
     if (whom !== '' && reason !== '') {
       setIsDisabled(false);
@@ -48,6 +50,7 @@ function OrderPrayer() {
             <input
               type="text"
               name="whom"
+              value={ whom }
               className="block border rounded-lg w-full py-1 px-2 my-1"
               onChange={ ({ target: { value } }) => setWhom(value) }
             />
@@ -56,6 +59,7 @@ function OrderPrayer() {
               Por Qual Motivo?
             </label>
             <textarea
+              value={ reason }
               name="reason"
               rows="5"
               className="block border rounded-lg w-full py-1 px-2 my-1"
@@ -71,12 +75,28 @@ function OrderPrayer() {
               hover:text-gray-300 hover:scale-110 hover:bg-green-900"
                 disabled={ isDisabled }
                 onClick={ () => {
-                  setPrayerObject({ whom, reason, register: true, confirmButton });
-                  setPreview(true);
+                  setPrayerObject({
+                    whom,
+                    reason,
+                    register: true,
+                    confirmButton,
+                    changePreview });
+                  changePreview();
                 } }
               >
                 Registrar Pedido de Oração
               </button>)}
+            <button
+              type="button"
+              className="bg-green-900 px-4 py-2 rounded-lg
+              text-gray-300 font-bold w-full mt-3 h-10
+              border-emerald-950 transition-transform transform
+              hover:text-gray-300 hover:scale-110 hover:bg-green-900"
+              onClick={ () => handleClick('/choose') }
+            >
+              Voltar
+
+            </button>
           </form>
         </div>
       ) : (
