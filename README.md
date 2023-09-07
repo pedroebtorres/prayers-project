@@ -1,4 +1,4 @@
-# Prayer Order Project
+# Prayers Project
 
 Aplicação full stack simples para fazer pedidos de oração e não ser necessário ficar anotando em papéis
 
