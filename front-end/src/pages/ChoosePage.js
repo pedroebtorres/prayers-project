@@ -9,7 +9,7 @@ function Choose() {
 
   useEffect(() => {
     getPrayers();
-  }, [getPrayers]);
+  });
 
   function isFirstCharacterNumber(str) {
     return !Number.isNaN(parseInt(str.charAt(0), 10));
