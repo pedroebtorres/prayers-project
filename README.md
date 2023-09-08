@@ -21,6 +21,7 @@ Aplicação full stack simples para fazer pedidos de oração e não ser necess�
     npm install
     env $(cat .env) npx sequelize-cli db:create
     env $(cat .env) npx sequelize-cli db:migrate
+    env $(cat .env) npx sequelize-cli db:seed:all
     env $(cat .env) npm run dev
     ```
 
