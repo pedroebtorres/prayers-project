@@ -60,7 +60,6 @@ function Choose() {
             hover:scale-125 hover:bg-green-900"
             disabled={ isDisabled }
             onClick={ () => {
-              getPrayers();
               handleClick('/prayer');
             } }
           >
