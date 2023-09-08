@@ -68,6 +68,17 @@ function Choose() {
             Fazer um pedido de oração
           </button>
         </div>
+        <button
+          type="button"
+          className="bg-green-900 px-4 py-2 rounded-lg
+              text-gray-300 font-bold w-full mt-3 h-10
+              border-emerald-950 transition-transform transform
+              hover:text-gray-800 hover:scale-110 hover:bg-yellow-300"
+          onClick={ () => handleClick('/') }
+        >
+          Voltar
+
+        </button>
       </div>
     </div>
   );
