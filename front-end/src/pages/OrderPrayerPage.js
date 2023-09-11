@@ -19,7 +19,7 @@ function OrderPrayer() {
     hover:text-gray-300 hover:scale-110 hover:bg-green-900"
       onClick={ () => {
         addPrayer({ whom, reason });
-        handleClick('/choose');
+        handleClick('/order-done');
       } }
     >
       Confirmar Pedido de Oração
