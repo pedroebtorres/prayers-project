@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from 'react';
 import LoginContext from '../context/LoginContext';
 import sarca from '../images/sarca-presbiteriana-nobg.png';
@@ -9,7 +10,7 @@ function Choose() {
 
   useEffect(() => {
     getPrayers();
-  });
+  }, []);
 
   function isFirstCharacterNumber(str) {
     return !Number.isNaN(parseInt(str.charAt(0), 10));
